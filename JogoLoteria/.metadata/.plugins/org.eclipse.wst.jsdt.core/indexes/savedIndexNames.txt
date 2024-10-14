@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\franc\Desktop\Dev_Lira\Workspace_java\JogoLoteria\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1579611850.index
+909739203.index
+4146452675.index
+672685398.index
+1722210728.index

@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+C:\Users\franc\Desktop\Dev_Lira\Workspace_java\Java_estudos\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2255558868.index
+2954774050.index
+2693943833.index
+1013297399.index

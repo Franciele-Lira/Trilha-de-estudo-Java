@@ -1,0 +1,71 @@
+package banco;
+
+ class Sistema_Banco {
+	private String nome;
+	private String sobrenome;
+	private String cpf;
+	private double saldo;
+	
+
+public Sistema_Banco(String nome, String sobrenome, String cpf) {
+	this.nome = nome;
+	this.sobrenome = sobrenome;
+	this.cpf = cpf;
+	this.saldo = 0.0;
+}
+
+public void consultarSaldo() {
+	System.out.println("Saldo:R$ " + saldo);
+	
+}
+
+public String getNome() {
+	return nome;
+}
+
+public void setNome(String nome) {
+	this.nome = nome;
+}
+
+public String getSobrenome() {
+	return sobrenome;
+}
+
+public void setSobrenome(String sobrenome) {
+	this.sobrenome = sobrenome;
+}
+
+public String getCpf() {
+	return cpf;
+}
+
+public void setCpf(String cpf) {
+	this.cpf = cpf;
+}
+
+public double getSaldo() {
+	return saldo;
+}
+
+public void setSaldo(double saldo) {
+	this.saldo = saldo;
+}
+
+public void fazerDeposito(double valor) {
+	saldo += valor;
+	System.out.println("Deposito de R$ " + valor + "Efetuado com sucesso. ");
+}
+
+public void fazerSaque(double valor) {
+	
+	if(valor <= saldo) {
+		saldo -= valor;
+		System.out.println("Saque de R$ " + valor + "Efetuado com sucesso.");
+	} else {
+		System.out.println("Saldo insuficiente.");
+	}
+}
+
+ }
+
+

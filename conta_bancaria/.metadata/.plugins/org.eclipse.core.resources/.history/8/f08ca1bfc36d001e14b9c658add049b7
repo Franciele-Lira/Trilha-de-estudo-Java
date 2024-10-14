@@ -1,0 +1,89 @@
+package banco;
+import java.util.Scanner;
+
+public class ContaNoBanco {
+	
+
+	// Classe para representar a conta bancária
+	class ContaBancaria {
+	    private String nome;
+	    private String sobrenome;
+	    private String cpf;
+	    private double saldo;
+
+	    public ContaBancaria(String nome, String sobrenome, String cpf) {
+	        this.nome = nome;
+	        this.sobrenome = sobrenome;
+	        this.cpf = cpf;
+	        this.saldo = 0.0;
+	    }
+
+	    public void consultarSaldo() {
+	        System.out.println("Saldo: R$" + saldo);
+	    }
+
+	    public void fazerDeposito(double valor) {
+	        saldo += valor;
+	        System.out.println("Depósito de R$" + valor + " efetuado com sucesso.");
+	    }
+
+	    public void fazerSaque(double valor) {
+	        if (valor <= saldo) {
+	            saldo -= valor;
+	            System.out.println("Saque de R$" + valor + " efetuado com sucesso.");
+	        } else {
+	            System.out.println("Saldo insuficiente para o saque.");
+	        }
+	    }
+	
+	// Classe para gerenciar as operações bancárias
+	class GerenciadorBancario {
+	    public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        System.out.println("Bem-vindo ao Gerenciador Bancário!");
+	        System.out.print("Digite seu nome: ");
+	        String nome = scanner.nextLine();
+	        System.out.print("Digite seu sobrenome: ");
+	        String sobrenome = scanner.nextLine();
+	        System.out.print("Digite seu CPF: ");
+	        String cpf = scanner.nextLine();
+
+	        ContaBancaria conta = new ContaBancaria(nome, sobrenome, cpf);
+
+	        while (true) {
+	            System.out.println("\nEscolha uma opção:");
+	            System.out.println("1. Consultar Saldo");
+	            System.out.println("2. Fazer Depósito");
+	            System.out.println("3. Fazer Saque");
+	            System.out.println("4. Encerrar");
+
+	            int opcao = scanner.nextInt();
+
+	            switch (opcao) {
+	                case 1:
+	                    conta.consultarSaldo();
+	                    break;
+	                case 2:
+	                    System.out.print("Digite o valor do depósito: ");
+	                    double valorDeposito = scanner.nextDouble();
+	                    conta.fazerDeposito(valorDeposito);
+	                    break;
+	                case 3:
+	                    System.out.print("Digite o valor do saque: ");
+	                    double valorSaque = scanner.nextDouble();
+	                    conta.fazerSaque(valorSaque);
+	                    break;
+	                case 4:
+	                    System.out.println("Encerrando a aplicação.");
+	                    scanner.close();
+	                    System.exit(0);
+	                default:
+	                    System.out.println("Opção inválida. Tente novamente.");
+	            }
+	        }
+	    }
+	}
+
+	
+}}

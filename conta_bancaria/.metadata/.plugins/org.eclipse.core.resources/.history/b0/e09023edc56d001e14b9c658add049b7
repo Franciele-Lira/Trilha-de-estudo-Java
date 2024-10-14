@@ -1,0 +1,15 @@
+package banco;
+
+public class ContaCliente extends ContaNoBanco {
+
+	public ContaCliente(String nome, String sobrenome, String cpf) {
+		super(nome, sobrenome, cpf);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package banco;
+
+public class Sistema_Banco {
+	private String nome;
+	private String sobrenome;
+	private String cpf;
+	private double saldo;
+	
+
+public Sistema_Banco(String nome, String sobrenome, String cpf) {
+	this.nome = nome;
+	this.sobrenome = sobrenome;
+	this.cpf = cpf;
+	this.saldo = 0.0;
+}}
+
+
