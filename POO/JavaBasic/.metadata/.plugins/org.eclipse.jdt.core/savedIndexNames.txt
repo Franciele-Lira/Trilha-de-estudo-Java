@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\franc\OneDrive\Documentos\Dev_Lira\Java_estudos\WorkspaceSpring\JavaBasic\.metadata\.plugins\org.eclipse.jdt.core
+3646679643.index
+1865797976.index
+234720871.index
